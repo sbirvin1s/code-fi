@@ -1,7 +1,7 @@
 # Project 1
 
 ---- 
- -[ ] Create Home Page:
+ - [ ] Create Home Page:
    - [ ] Contain image or logo for the website
    - [ ] Must contain 5 navigation links:
        - [ ] Home
