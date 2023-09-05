@@ -1,14 +1,14 @@
 # Project 1
 
 ---- 
- -[ ] Create Home Page:
+ - [ ] Create Home Page:
    - [ ] Contain image or logo for the website
-   - [ ] Must contain 5 navigation links:
-       - [ ] Home
-       - [ ] Registration
-       - [ ] Login
-       - [ ] Account 
-       - [ ] Logout
+   - [x] Must contain 5 navigation links:
+       - [x] Home
+       - [x] Registration
+       - [x] Login
+       - [x] Account 
+       - [x] Logout
    - [ ] Footer will contain links to web pages of any other sites that you wish (just must be outside your webpage, like Youtube, etc.) and links must open in new tab, not current tab
 
 <br>
