@@ -22,7 +22,7 @@
 
 <br>
 
-- [ ] Create an Account Page:
+- [x] Create an Account Page:
   - [x] First Name - Input Text
   - [x] Last Name - Input Text
   - [x] Address Line 1 - Input Text
@@ -37,11 +37,11 @@
 
 <br>
 
-- [ ] Create Login page:
-  - [ ] User Name - Input Text
-  - [ ] Password - Input Password
-  - [ ] Submit Button - Form submit button
-  - [ ] Reset Button - Clears form fields to default settings
+- [x] Create Login page:
+  - [x] User Name - Input Text
+  - [x] Password - Input Password
+  - [x] Submit Button - Form submit button
+  - [x] Reset Button - Clears form fields to default settings
 
 ----
 
