@@ -3,11 +3,27 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="../styles/index.css" />
+      <link rel="stylesheet" type="text/css" href="../../styles/index.css" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu">
-      <title>Home</title>
+      <script type="text/javascript" src="../components/Radio.js"></script>
+      <script type="text/javascript" src="https://www.youtube.com/player_api"></script>
+
+      <title>Radio</title>
   </head>
   <body>
-    <h1>Radio Placeholder</h1>
+    <iframe
+      id="player"
+      class="Iframe_radio"
+      src="https://www.youtube-nocookie.com/embed/videoseries?si=zrcdvtg2eEp4RjSb&amp;list=PL_azL6O8P64gaVhXjcxRRJWFL8RYLro0z&autoplay=1&enablejsapi=1&controls=0"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+    >
+    </iframe>
+    <br/>
+    <button id="playButton">Play</button>
+    <button id="pauseButton">Pause</button>
+    <br/>
+    <input class="Input_volume" id="volumeSlider" name="volumeSlider" type="range" min="0" max="100" value="15"/>
+    <label for="volumeSlider">Volume</label>
   </body>
 </html>
