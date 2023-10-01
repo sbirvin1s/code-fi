@@ -5,40 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../../styles/index.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Fira+Sans">
-  <title>Account</title>
+  <link rel="stylesheet" href="../../styles/fontawesome.min.css">
+  <script type="text/javascript" src="../components/Password.js"></script>
+  <title>Code-Fi</title>
 </head>
   <body>
-    <form>
-      <label for="userName">User Name</label>
-      <br>
-      <input
-        id="userName"
-        type="text"
-        class=""
-        name="userName"
-        placeholder="User Name"
-        required
-      />
 
-      <br>
+    <div class="Background">
 
-      <label for="password">Password</label>
-      <br>
-      <input
-        id="password"
-        type="password"
-        class="Password__input___secret"
-        name="password"
-        placeholder="****************"
-        required
-      />
-      <button >x</button>
+      <nav class="Header">
+        <a href="../index.html" class="Link">Home</a>
+        <a href="./Radio.html" class="Link">Radio</a>
+        <a href="./Registration.html" class="Link">Registration</a>
+        <a href="./Login.html" class="Link Link_login">Login</a>
+        <a href="./Logout.html" class="Link Link_logout">Logout</a>
+        <a href="./Account.html" class="Link_account">Account</a>
+      </nav>
 
-      <br>
+      <div class="Background_diffuser">
+        <div class="Portal">
+          <form>
+            <div class="Column">
+              <h1>Sign In</h1>
+              <div class="Input_wrapper">
+                <input
+                  id="userName"
+                  type="text"
+                  class=""
+                  name="userName"
+                  placeholder=""
+                  required
+                />
+                <label for="userName">User Name</label>
+              </div>
 
-      <button type="submit" class="Button__submit">Submit</button>
-      <button type="reset" class="Button__clear">Clear</button>
+              <div class="Row_passwordContainer">
+                <div class="Input_wrapper">
+                  <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder=""
+                    required
+                  />
+                  <label for="password">Password</label>
+                </div>
+                <button id="showPassword" class="Button_showPassword___inactive"><i class="fa-solid fa-eye"></i></button>
+              </div>
+            </div>
 
-    </form>
+
+            <div class="Row">
+              <button type="submit" >Submit</button>
+              <button type="reset" class="Button___outlined">Clear</button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+      <footer class="Footer">
+        <a
+          href="https://music.youtube.com/channel/UC4UtqLOP_fmimSqdzbIksBQ"
+          class="Link"
+          target="_blank"
+        >
+          DJ Cutman
+        </a>
+        <a
+          href="https://music.youtube.com/channel/UCEG-f4I9kT_OFQv44ch6Y8Q"
+          class="Link"
+          target="_blank"
+        >
+          Game Chops
+        </a>
+      </footer>
+
+
+      </div>
+
   </body>
 </html>

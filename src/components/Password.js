@@ -6,7 +6,10 @@ window.onload = event => {
   showConfirmPassword = document.getElementById('showConfirmPassword');
 
   showPassword.addEventListener('click', () => toggleShowPassword(showPassword));
-  showConfirmPassword.addEventListener('click', () => toggleShowPassword(showConfirmPassword));
+
+  if (showConfirmPassword) {
+    showConfirmPassword.addEventListener('click', () => toggleShowPassword(showConfirmPassword));
+  }
 }
 
 

@@ -17,9 +17,10 @@
   --main-grey: rgba(255, 255, 255, 0.23);
   --main-dark-grey: #121212;
   --main-focus: #a679d2;
+  --main-purple: #92278f;
   --main-ease: cubic-bezier(.65,.05,.36,1);
-  --logo-gradient:linear-gradient(60deg, #1C75BC, #92278F);
-  /* --logo-gradient:linear-gradient(60deg, #1C75BC 0%, #92278F 100%, #92278F 100%); */
+  /* --logo-gradient:linear-gradient(60deg, #1C75BC, #92278F); */
+  --logo-gradient:linear-gradient(60deg, #1C75BC 0%, #92278F 100%, #92278F 100%);
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 
 }
@@ -39,6 +40,7 @@ body {
 h1 {
   font-family: 'Audiowide';
   font-size: 2.5rem;
+  color: var(--main-purple);
 }
 
 h2 {
@@ -84,6 +86,16 @@ p {
 
 }
 
+.Logo {
+  font-family: 'Audiowide';
+  font-size: 4rem;
+  background: var(--logo-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: var(--logo-gradient); */
+}
+
 /*
 =====================================
                Media Queries
@@ -120,6 +132,12 @@ p {
   justify-content: space-evenly;
   align-items: space-evenly;
   min-width: 100%;
+}
+
+.Row_passwordContainer {
+  position: relative;
+  display: flex;
+  align-items: space-evenly;
 }
 
 .Column {
@@ -213,13 +231,19 @@ button {
 }
 
 .Button_showPassword___inactive {
+  position: absolute;
   transform: scale(2);
+  top: 1.5rem;
+  right: 2rem;
+  height: 0;
+  width: 0;
   background-color: transparent;
   color: var(--main-blue);
   margin: 0;
   padding: 0;
   border: none;
   outline-color: transparent;
+  z-index: 2;
 }
 
 .Button_showPassword___inactive:hover {
@@ -230,13 +254,19 @@ button {
 }
 
 .Button_showPassword___active {
+  position: absolute;
   transform: scale(2);
+  top: 1.5rem;
+  right: 2rem;
+  height: 0;
+  width: 0;
   background-color: transparent;
   color: var(--main-focus);
   margin: 0;
   padding: 0;
   border: none;
   outline-color: transparent;
+  z-index: 2;
 }
 
 .Button_showPassword___active:hover {
@@ -288,6 +318,10 @@ form {
   border: none;
 } */
 .Portal {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
   width: 90vw;
   height: 80vh;
   border: none;
