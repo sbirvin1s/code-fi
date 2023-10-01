@@ -2,7 +2,7 @@
 
 window.onload = event => {
   setTimeout(() => {
-    window.location.replace('../index.html');
+    window.location.replace('./Login.html');
   }, 1500);
 }
 

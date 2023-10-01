@@ -4,191 +4,227 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../../styles/index.css" />
+  <script type="text/javascript" src="../components/PhoneNumber.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Fira+Sans">
   <title>Code-Fi</title>
 </head>
   <body>
-    <form>
-      <div class="Row">
-        <div class="Input_wrapper">
-          <input
-            id="firstName"
-            type="text"
-            name="firstName"
-            placeholder=""
-            required
-          />
-          <label for="firstName">First Name</label>
-        </div>
 
-        <div class="Input_wrapper">
-          <input
-            id="lastName"
-            type="text"
-            name="lastName"
-            placeholder=""
-            required
-          />
-          <label for="lastName">Last Name</label>
-        </div>
-      </div>
+    <div class="Background">
 
-      <div class="Column">
+      <nav class="Header">
+        <a href="../index.html" class="Link">Home</a>
+        <a href="./Radio.html" class="Link">Radio</a>
+        <a href="./Registration.html" class="Link">Registration</a>
+        <a href="./Login.html" class="Link Link_login">Login</a>
+        <a href="./Logout.html" class="Link Link_logout">Logout</a>
+        <a href="./Account.html" class="Link_account">Account</a>
+      </nav>
 
-        <h3>Address</h3>
-        <div class="Row">
-
-          <div class="Column">
-            <div class="Input_wrapper">
-              <input
-                id="streetAddress"
-                type="text"
-                name="streetAddress"
-                placeholder=""
-                required
-              />
-              <label for="streetAddress">Street Address </label>
-            </div>
-
-            <div class="Input_wrapper">
-              <input
-                id="streetAddress2"
-                type="text"
-                name="streetAddress2"
-                placeholder=""
-              />
-              <label for="streetAddress2">Street Address Line 2</label>
-            </div>
-          </div>
-
-          <div class="Column">
-
+      <div class="Background_diffuser">
+        <div class="Portal">
+          <form>
+            <h1>Account</h1>
             <div class="Row">
               <div class="Input_wrapper">
                 <input
-                  id="city"
+                  id="firstName"
                   type="text"
-                  name="city"
+                  name="firstName"
                   placeholder=""
                   required
                 />
-                <label for="city">City</label>
+                <label for="firstName">First Name</label>
               </div>
 
               <div class="Input_wrapper">
-                <select
-                  id="state"
+                <input
+                  id="lastName"
                   type="text"
-                  name="state"
-                  value=""
+                  name="lastName"
+                  placeholder=""
                   required
-                >
-                  <option selected disabled value=""></option>
-                  <option value="alabama">AL</option>
-                  <option value="alaska">AK</option>
-                  <option value="arizona">AZ</option>
-                  <option value="arkansas">AR</option>
-                  <option value="california">CA</option>
-                  <option value="colorado">CO</option>
-                  <option value="connecticut">CT</option>
-                  <option value="delaware">DE</option>
-                  <option value="florida">FL</option>
-                  <option value="georgia">GA</option>
-                  <option value="hawaii">HI</option>
-                  <option value="idaho">ID</option>
-                  <option value="illinois">IL</option>
-                  <option value="indiana">IN</option>
-                  <option value="iowa">IA</option>
-                  <option value="kansas">KS</option>
-                  <option value="kentucky">KY</option>
-                  <option value="louisiana">LA</option>
-                  <option value="maine">ME</option>
-                  <option value="maryland">MD</option>
-                  <option value="massachusetts">MA</option>
-                  <option value="michigan">MI</option>
-                  <option value="minnesota">MN</option>
-                  <option value="mississippi">MS</option>
-                  <option value="missouri">MO</option>
-                  <option value="montana">MT</option>
-                  <option value="nebraska">NE</option>
-                  <option value="nevada">NV</option>
-                  <option value="newHampshire">NH</option>
-                  <option value="newJersey">NJ</option>
-                  <option value="newMexico">NM</option>
-                  <option value="newYork">NY</option>
-                  <option value="northCarolina">NC</option>
-                  <option value="northDakota">ND</option>
-                  <option value="ohio">OH</option>
-                  <option value="oklahoma">OK</option>
-                  <option value="oregon">OR</option>
-                  <option value="pennsylvania">PA</option>
-                  <option value="rhodeIsland">RI</option>
-                  <option value="southCarolina">SC</option>
-                  <option value="southDakota">SD</option>
-                  <option value="tennessee">TN</option>
-                  <option value="texas">TX</option>
-                  <option value="utah">UT</option>
-                  <option value="vermont">VT</option>
-                  <option value="virginia">VA</option>
-                  <option value="washington">WA</option>
-                  <option value="westVirginia">WV</option>
-                  <option value="wisconsin">WI</option>
-                  <option value="wyoming">WY</option>
-                </select>
-                <label for="state">State</label>
+                />
+                <label for="lastName">Last Name</label>
               </div>
             </div>
 
-            <div class="Input_wrapper">
-              <input
-                id="zipcode"
-                type="number"
-                name="zipcode"
-                placeholder=""
-                required
-              />
-              <label for="zipcode">Zipcode</label>
+            <div class="Column">
+
+              <h3>Address</h3>
+              <div class="Row">
+
+                <div class="Column">
+                  <div class="Input_wrapper">
+                    <input
+                      id="streetAddress"
+                      type="text"
+                      name="streetAddress"
+                      placeholder=""
+                      required
+                    />
+                    <label for="streetAddress">Street Address </label>
+                  </div>
+
+                  <div class="Input_wrapper">
+                    <input
+                      id="streetAddress2"
+                      type="text"
+                      name="streetAddress2"
+                      placeholder=""
+                    />
+                    <label for="streetAddress2">Street Address Line 2</label>
+                  </div>
+                </div>
+
+                <div class="Column">
+
+                  <div class="Row">
+                    <div class="Input_wrapper">
+                      <input
+                        id="city"
+                        type="text"
+                        name="city"
+                        placeholder=""
+                        required
+                      />
+                      <label for="city">City</label>
+                    </div>
+
+                    <div class="Input_wrapper">
+                      <select
+                        id="state"
+                        type="text"
+                        name="state"
+                        value=""
+                        required
+                      >
+                        <option selected disabled value=""></option>
+                        <option value="alabama">AL</option>
+                        <option value="alaska">AK</option>
+                        <option value="arizona">AZ</option>
+                        <option value="arkansas">AR</option>
+                        <option value="california">CA</option>
+                        <option value="colorado">CO</option>
+                        <option value="connecticut">CT</option>
+                        <option value="delaware">DE</option>
+                        <option value="florida">FL</option>
+                        <option value="georgia">GA</option>
+                        <option value="hawaii">HI</option>
+                        <option value="idaho">ID</option>
+                        <option value="illinois">IL</option>
+                        <option value="indiana">IN</option>
+                        <option value="iowa">IA</option>
+                        <option value="kansas">KS</option>
+                        <option value="kentucky">KY</option>
+                        <option value="louisiana">LA</option>
+                        <option value="maine">ME</option>
+                        <option value="maryland">MD</option>
+                        <option value="massachusetts">MA</option>
+                        <option value="michigan">MI</option>
+                        <option value="minnesota">MN</option>
+                        <option value="mississippi">MS</option>
+                        <option value="missouri">MO</option>
+                        <option value="montana">MT</option>
+                        <option value="nebraska">NE</option>
+                        <option value="nevada">NV</option>
+                        <option value="newHampshire">NH</option>
+                        <option value="newJersey">NJ</option>
+                        <option value="newMexico">NM</option>
+                        <option value="newYork">NY</option>
+                        <option value="northCarolina">NC</option>
+                        <option value="northDakota">ND</option>
+                        <option value="ohio">OH</option>
+                        <option value="oklahoma">OK</option>
+                        <option value="oregon">OR</option>
+                        <option value="pennsylvania">PA</option>
+                        <option value="rhodeIsland">RI</option>
+                        <option value="southCarolina">SC</option>
+                        <option value="southDakota">SD</option>
+                        <option value="tennessee">TN</option>
+                        <option value="texas">TX</option>
+                        <option value="utah">UT</option>
+                        <option value="vermont">VT</option>
+                        <option value="virginia">VA</option>
+                        <option value="washington">WA</option>
+                        <option value="westVirginia">WV</option>
+                        <option value="wisconsin">WI</option>
+                        <option value="wyoming">WY</option>
+                      </select>
+                      <label for="state">State</label>
+                    </div>
+                  </div>
+
+                  <div class="Input_wrapper">
+                    <input
+                      id="zipcode"
+                      type="number"
+                      name="zipcode"
+                      placeholder=""
+                      required
+                    />
+                    <label for="zipcode">Zipcode</label>
+                  </div>
+
+                </div>
+
+              </div>
             </div>
 
-          </div>
+            <div class="Column">
+              <h3>Contact Info</h3>
+              <div class="Row">
 
+                <div class="Input_wrapper">
+                  <input
+                    id="phoneNumber"
+                    type="tel"
+                    name="phoneNumber"
+                    placeholder=""
+                    required
+                  />
+                  <label for="phoneNumber">Phone Number</label>
+                </div>
+
+                <div class="Input_wrapper">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder=""
+                    required
+                  />
+                  <label for="email">Email Address</label>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="Row">
+              <button type="submit" >Submit</button>
+              <button type="reset" class="Button___outlined">Clear</button>
+            </div>
+
+          </form>
         </div>
       </div>
 
-      <div class="Column">
-        <h3>Contact Info</h3>
-        <div class="Row">
+      <footer class="Footer">
+        <a
+          href="https://music.youtube.com/channel/UC4UtqLOP_fmimSqdzbIksBQ"
+          class="Link"
+          target="_blank"
+        >
+          DJ Cutman
+        </a>
+        <a
+          href="https://music.youtube.com/channel/UCEG-f4I9kT_OFQv44ch6Y8Q"
+          class="Link"
+          target="_blank"
+        >
+          Game Chops
+        </a>
+      </footer>
 
-          <div class="Input_wrapper">
-            <input
-              id="phoneNumber"
-              type="tel"
-              name="phoneNumber"
-              placeholder=""
-              required
-            />
-            <label for="phoneNumber">Phone Number</label>
-          </div>
-
-          <div class="Input_wrapper">
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder=""
-              required
-            />
-            <label for="email">Email Address</label>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="Row">
-        <button type="submit" >Submit</button>
-        <button type="reset" class="Button___outlined">Clear</button>
-      </div>
-
-    </form>
   </body>
 </html>
