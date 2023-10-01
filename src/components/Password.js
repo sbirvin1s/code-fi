@@ -1,18 +1,24 @@
-var showPassword = document.getElementById('showPassword');
+var showPassword;
+var showConfirmPassword;
 
-showPassword.addEventListener('click', toggleShowPassword());
+window.onload = event => {
+  showPassword = document.getElementById('showPassword');
+  showConfirmPassword = document.getElementById('showConfirmPassword');
+
+  showPassword.addEventListener('click', () => toggleShowPassword(showPassword));
+  showConfirmPassword.addEventListener('click', () => toggleShowPassword(showConfirmPassword));
+}
 
 
 
-function toggleShowPassword() {
-  const passwordInput = showPassword.closest('input');
-  console.log('toggleShowPassword was called');
+function toggleShowPassword( targetElement ) {
+  const passwordInput = targetElement.closest('div').children[0].children[0];
 
-  if (showPassword.getAttribute('class') === "Button_showPassword___inactive") {
+  if (targetElement.getAttribute('class') === "Button_showPassword___inactive") {
     passwordInput.setAttribute('type', 'text');
-    showPassword.setAttribute('class', 'Button_showPassword___active');
+    targetElement.setAttribute('class', 'Button_showPassword___active');
   } else {
     passwordInput.setAttribute('type', 'password');
-    showPassword.setAttribute('class', 'Button_showPassword___inactive');
+    targetElement.setAttribute('class', 'Button_showPassword___inactive');
   }
-}
+};
