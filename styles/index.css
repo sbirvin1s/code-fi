@@ -83,7 +83,8 @@ p {
   display: flex;
   justify-content: center;
   background-color: rgba(14, 14, 14, 0.75);
-
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .Logo {
@@ -93,17 +94,6 @@ p {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* color: var(--logo-gradient); */
-}
-
-/*
-=====================================
-               Media Queries
-=====================================
-*/
-
-@media (max-width: smallScreen) {
-
 }
 
 /*
@@ -128,18 +118,22 @@ p {
 */
 
 .Portal {
+  position: relative;
   display: flex;
-  margin: 10px;
-  border-radius: var(--borderRadius);
   flex-direction: column;
-  /* background-color: var(--main-grey); */
   align-items: center;
   width: 90vw;
   height: 80vh;
-  border: none;
 }
 
 .Row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 100%;
+}
+
+.Account_container {
   display: flex;
   justify-content: space-evenly;
   align-items: space-evenly;
@@ -157,7 +151,17 @@ p {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* min-height: 100%; */
+}
+
+.Column_tight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Logout {
+  justify-content: center;
 }
 
 
@@ -176,19 +180,6 @@ p {
   top: 1rem;
   right: 1rem;
 }
-
-/* .Link_login {
-  position: absolute;
-  top: 3rem;
-  right: 5rem;
-}
-
-.Link_logout {
-  position: absolute;
-  top: 3rem;
-  right: 2rem;
-} */
-
 
 /*
 =====================================
@@ -227,25 +218,6 @@ button {
   border: 2px solid var(--main-blue);
   color: var(--main-blue);
   outline-color: transparent;
-}
-
-.RadioControls_button {
-  transform: scale(3);
-  background-color: transparent;
-  color: var(--main-blue);
-  height: 0;
-  width: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline-color: transparent;
-}
-
-.RadioControls_button:hover {
-  transform: scale(3.5);
-}
-.RadioControls_button:active {
-  transform: scale(2.5);
 }
 
 .Button_showPassword___inactive {
@@ -340,9 +312,6 @@ form {
               Inputs
 =====================================
 */
-.Input_volume {
-  appearance: slider-vertical;
-}
 
 .Input_wrapper {
   position: relative;
@@ -428,6 +397,83 @@ form {
 
 /*
 =====================================
+              Radio
+=====================================
+*/
+#playButton {
+  visibility: hidden;
+  position: absolute;
+  left: 47%;
+  bottom: 20%;
+  transform: scale(15);
+}
+
+#pauseButton {
+  visibility: visible;
+  position: absolute;
+  left: 47%;
+  bottom: 20%;
+  transform: scale(15);
+}
+
+#muteOn {
+  visibility: visible;
+}
+
+#muteOff {
+  visibility: hidden;
+}
+
+#RadioLogo {
+  position: fixed;
+  top: 40%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(2.75);
+	}
+
+	70% {
+		transform: scale(3);
+	}
+
+	100% {
+		transform: scale(2.75);
+	}
+}
+
+.Radio_controls {
+  position: absolute;
+  bottom: 3rem;
+  transform: scale(2);
+}
+
+.RadioControls_button {
+  transform: scale(3);
+  background-color: transparent;
+  color: var(--main-blue);
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline-color: transparent;
+}
+
+.RadioControls_button:hover {
+  transform: scale(3.5);
+}
+.RadioControls_button:active {
+  transform: scale(2.5);
+}
+
+/*
+=====================================
               Footer
 =====================================
 */
@@ -440,3 +486,132 @@ form {
   min-height: 10vh;
   background-color: rgba(14, 14, 14, 0.85);
 }
+
+
+/*
+=====================================
+               Media Queries
+=====================================
+*/
+
+@media (width < 1007px) {
+  #RadioLogo {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+    z-index: 2;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1.75);
+    }
+
+    70% {
+      transform: scale(2.25);
+    }
+
+    100% {
+      transform: scale(1.75);
+    }
+  }
+
+  #playButton {
+    visibility: hidden;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(12);
+  }
+
+  #pauseButton {
+    visibility: visible;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(12);
+  }
+
+  .Radio_controls {
+    transform: scale(1.5);
+  }
+}
+
+@media (width < 640px) {
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+  }
+
+  .Account_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #RadioLogo {
+    position: fixed;
+    top: 40%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+    z-index: 2;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1.15);
+    }
+
+    70% {
+      transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  #playButton {
+    visibility: hidden;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(6);
+  }
+
+  #pauseButton {
+    visibility: visible;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(6);
+  }
+
+  .Portal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .Radio_controls {
+    transform: scale(1);
+  }
+}
+

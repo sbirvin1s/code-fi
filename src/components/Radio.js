@@ -27,37 +27,35 @@ function onPlayerReady(event) {
 
   player.setVolume(15);
 
-  if (player.isMute) {
-    muteOff.style.display = 'inline';
-    muteOff.removeAttribute('disabled');
-    muteOn.style.display = 'none'
-    muteOn.disabled = true;
-  } else {
-    muteOn.style.display = 'inline';
-    muteOn.removeAttribute('disabled');
-    muteOff.style.display = 'none'
-    muteOff.disabled = true;
-  }
-
   playButton.addEventListener('click', () => {
     player.playVideo()
+    playButton.disabled = true;
+    pauseButton.disabled = false;
+    playButton.style.visibility = 'hidden';
+    pauseButton.style.visibility = 'visible';
   });
-  pauseButton.addEventListener('click', () => player.pauseVideo());
+  pauseButton.addEventListener('click', () => {
+    player.pauseVideo()
+    pauseButton.disabled = true;
+    playButton.disabled = false;
+    pauseButton.style.visibility = 'hidden';
+    playButton.style.visibility = 'visible';
+  });
   volume.addEventListener('change', event => {
     player.setVolume(event.target.value);
   });
   muteOn.addEventListener('click', () => {
     player.unMute();
-    muteOff.style.display = 'inline';
+    muteOff.style.visibility = 'visible';
     muteOff.removeAttribute('disabled');
-    muteOn.style.display = 'none';
+    muteOn.style.visibility = 'hidden';
     muteOn.disabled = true;
   });
   muteOff.addEventListener('click', () => {
     player.mute();
-    muteOn.style.display = 'inline';
+    muteOn.style.visibility = 'visible';
     muteOn.removeAttribute('disabled');
-    muteOff.style.display = 'none'
+    muteOff.style.visibility = 'hidden'
     muteOff.disabled = true;
   });
 }

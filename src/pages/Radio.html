@@ -4,6 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="../../styles/index.css" />
+      <link rel="icon" href="../../favicon.svg"/>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu">
       <link rel="stylesheet" href="../../styles/fontawesome.min.css">
       <script type="text/javascript" src="../components/Radio.js"></script>
@@ -35,35 +36,33 @@
           >
           </iframe>
 
-        <img src="../../images/code-fi logo - dark.png"/>
+        <img id="RadioLogo" src="../../images/code-fi logo - dark.png" alt="code-fi logo"/>
 
-        <div class="Radio_controls">
+        <div class="Row Radio_controls">
           <input
-            class="Input_volume"
             id="volumeSlider"
             name="volumeSlider"
             type="range"
             min="0"
             max="100"
             value="15"/>
-          <label for="volumeSlider">Volume</label>
-
-          <button id="muteOn" class="RadioControls_button">
-            <i class="fa-solid fa-volume-off"></i>
-          </button>
-          <button id="muteOff" class="RadioControls_button">
-            <i class="fa-solid fa-volume-high"></i>
-          </button>
-
-          <div class="Row">
-            <button id="playButton" class="RadioControls_button">
-              <i class="fa-solid fa-play"></i>
+          <label for="volumeSlider">
+            <button id="muteOn" class="RadioControls_button">
+              <i class="fa-solid fa-volume-off"></i>
             </button>
-            <button id="pauseButton" class="RadioControls_button">
-              <i class="fa-solid fa-pause"></i>
+            <button id="muteOff" class="RadioControls_button" disabled>
+              <i class="fa-solid fa-volume-high"></i>
             </button>
-          </div>
+          </label>
 
+        </div>
+        <div class="Row">
+          <button id="playButton" class="RadioControls_button" disabled>
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button id="pauseButton" class="RadioControls_button">
+            <i class="fa-solid fa-pause"></i>
+          </button>
         </div>
 
       </div>
@@ -77,14 +76,14 @@
         class="Link"
         target="_blank"
       >
-        DJ Cutman
+        DJ Cutman Radio
       </a>
       <a
         href="https://music.youtube.com/channel/UCEG-f4I9kT_OFQv44ch6Y8Q"
         class="Link"
         target="_blank"
       >
-        Game Chops
+        Game Chops Radio
       </a>
     </footer>
 

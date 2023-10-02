@@ -15,6 +15,7 @@ window.onload = event => {
 
 
 function toggleShowPassword( targetElement ) {
+  event.preventDefault();
   const passwordInput = targetElement.closest('div').children[0].children[0];
 
   if (targetElement.getAttribute('class') === "Button_showPassword___inactive") {
