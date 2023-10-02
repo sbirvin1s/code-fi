@@ -1,0 +1,617 @@
+/*
+=====================================
+           Color Palette
+=====================================
+*/
+
+/*
+=====================================
+               Main
+=====================================
+*/
+:root {
+  --smallScreen: 640px;
+  --mediumScreen: 1007px;
+  --main-blue: #90caf9;
+  --main-white: #f8f5ef;
+  --main-grey: rgba(255, 255, 255, 0.23);
+  --main-dark-grey: #121212;
+  --main-focus: #a679d2;
+  --main-purple: #92278f;
+  --main-ease: cubic-bezier(.65,.05,.36,1);
+  --borderRadius: 0.5rem;
+  --logo-gradient:linear-gradient(60deg, #1C75BC, #92278F);
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+
+}
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Audiowide';
+  font-size: 2.5rem;
+  color: var(--main-purple);
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--main-white);
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.Background {
+  background-image: url('../images/code-fiBG1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: inherit;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.Background_diffuser {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(14, 14, 14, 0.75);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.Logo {
+  font-family: 'Audiowide';
+  font-size: 4rem;
+  background: var(--logo-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*
+=====================================
+              Header
+=====================================
+*/
+.Header {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 90vw;
+  min-height: 10vh;
+  background-color: rgba(14, 14, 14, 0.85);
+}
+
+/*
+=====================================
+              Layout
+=====================================
+*/
+
+.Portal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 80vh;
+}
+
+.Row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 100%;
+}
+
+.Account_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  min-width: 100%;
+}
+
+.Row_passwordContainer {
+  position: relative;
+  display: flex;
+  align-items: space-evenly;
+}
+
+.Column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Column_tight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Logout {
+  justify-content: center;
+}
+
+
+/*
+=====================================
+              Links
+=====================================
+*/
+.Link {
+  font-family: 'Audiowide', Arial, Helvetica, sans-serif;
+}
+
+.Link_account {
+  font-family: 'Audiowide', Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/*
+=====================================
+              Buttons
+=====================================
+*/
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 4px;
+  padding: 12px 35px;
+  gap: 10px;
+  background-color: var(--main-blue);
+  border-radius: var(--borderRadius);
+  height: 50px;
+  width: 125px;
+  border: none;
+  outline-color: transparent;
+}
+
+.Button___outlined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 4px;
+  padding: 12px 35px;
+  gap: 10px;
+  background-color: transparent;
+  border-radius: var(--borderRadius);
+  height: 50px;
+  width: 125px;
+  border: 2px solid var(--main-blue);
+  color: var(--main-blue);
+  outline-color: transparent;
+}
+
+.Button_showPassword___inactive {
+  position: absolute;
+  transform: scale(2);
+  top: 2.25rem;
+  right: 2.25rem;
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  color: var(--main-blue);
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline-color: transparent;
+  z-index: 2;
+}
+
+.Button_showPassword___inactive:hover {
+  transform: scale(2);
+}
+.Button_showPassword___inactive:active {
+  transform: scale(1.5);
+}
+
+.Button_showPassword___active {
+  position: absolute;
+  transform: scale(2);
+  top: 2.25rem;
+  right: 2.25rem;
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  color: var(--main-focus);
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline-color: transparent;
+  z-index: 2;
+}
+
+.Button_showPassword___active:hover {
+  transform: scale(2);
+}
+.Button_showPassword___active:active {
+  transform: scale(1.5);
+}
+
+button:hover,
+.Button___outlined:hover {
+  transform: scale(1.05);
+  transition: .1s var(--main-ease);
+}
+
+button:active,
+.Button___outlined:active {
+  transform: scale(0.95);
+}
+
+
+
+
+/*
+=====================================
+              Forms
+=====================================
+*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 30px; */
+  height: 90vh;
+  width: 90vw;
+}
+
+/*
+=====================================
+              iFrames
+=====================================
+*/
+
+.Iframe_radio {
+  display: none;
+}
+
+/*
+=====================================
+              Inputs
+=====================================
+*/
+
+.Input_wrapper {
+  position: relative;
+  margin: 10px;
+}
+
+.Input_wrapper input {
+  color: var(--main-white);
+  height: 3rem;
+  outline: 1px solid var(--main-grey);
+  border-radius: var(--borderRadius);
+  border: none;
+  background-color: var(--main-dark-grey);
+  padding-left: 20px;
+  font-size: 1rem;
+  transition: .1s var(--main-ease);
+}
+
+.Input_wrapper label {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: var(--main-dark-grey);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  transition: .2s var(--main-ease);
+  font-size: 1rem;
+  pointer-events: none;
+  padding: 0 5px;
+}
+
+.Input_wrapper input:not(:placeholder-shown) ~ label,
+.Input_wrapper input:focus ~ label {
+  top: 0px;
+  left: 10px;
+  font-size: 0.75rem;
+}
+
+.Input_wrapper input:focus {
+  outline: 1px solid var(--main-focus) !important;
+}
+
+.Input_wrapper input:hover {
+  outline: 1px solid var(--main-white);
+}
+
+.Input_wrapper input:focus ~ label {
+  color: var(--main-focus) !important;
+}
+
+.Input_wrapper select {
+  color: var(--main-white);
+  height: 3rem;
+  width: 5rem;
+  outline: 1px solid var(--main-grey);
+  border-radius: var(--borderRadius);
+  border: none;
+  background-color: var(--main-dark-grey);
+  padding-left: 20px;
+  font-size: 1rem;
+  transition: .1s var(--main-ease);
+}
+
+.Input_wrapper select:not([value=""]) ~ label,
+.Input_wrapper select:focus ~ label {
+  top: 0px;
+  left: 10px;
+  font-size: 0.75rem;
+}
+
+.Input_wrapper select:focus {
+  outline: 1px solid var(--main-focus) !important;
+}
+
+.Input_wrapper select:hover {
+  outline: 1px solid var(--main-white);
+}
+
+.Input_wrapper select:focus ~ label {
+  color: var(--main-focus) !important;
+}
+
+/*
+=====================================
+              Radio
+=====================================
+*/
+#playButton {
+  visibility: hidden;
+  position: absolute;
+  left: 47%;
+  bottom: 20%;
+  transform: scale(15);
+}
+
+#pauseButton {
+  visibility: visible;
+  position: absolute;
+  left: 47%;
+  bottom: 20%;
+  transform: scale(15);
+}
+
+#muteOn {
+  visibility: visible;
+}
+
+#muteOff {
+  visibility: hidden;
+}
+
+#RadioLogo {
+  position: fixed;
+  top: 40%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(2.75);
+	}
+
+	70% {
+		transform: scale(3);
+	}
+
+	100% {
+		transform: scale(2.75);
+	}
+}
+
+.Radio_controls {
+  position: absolute;
+  bottom: 3rem;
+  transform: scale(2);
+}
+
+.RadioControls_button {
+  transform: scale(3);
+  background-color: transparent;
+  color: var(--main-blue);
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline-color: transparent;
+}
+
+.RadioControls_button:hover {
+  transform: scale(3.5);
+}
+.RadioControls_button:active {
+  transform: scale(2.5);
+}
+
+/*
+=====================================
+              Footer
+=====================================
+*/
+.Footer {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 90vw;
+  min-height: 10vh;
+  background-color: rgba(14, 14, 14, 0.85);
+}
+
+
+/*
+=====================================
+               Media Queries
+=====================================
+*/
+
+@media (width < 1007px) {
+  #RadioLogo {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+    z-index: 2;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1.75);
+    }
+
+    70% {
+      transform: scale(2.25);
+    }
+
+    100% {
+      transform: scale(1.75);
+    }
+  }
+
+  #playButton {
+    visibility: hidden;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(12);
+  }
+
+  #pauseButton {
+    visibility: visible;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(12);
+  }
+
+  .Radio_controls {
+    transform: scale(1.5);
+  }
+}
+
+@media (width < 640px) {
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+  }
+
+  .Account_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #RadioLogo {
+    position: fixed;
+    top: 40%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+    z-index: 2;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1.15);
+    }
+
+    70% {
+      transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  #playButton {
+    visibility: hidden;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(6);
+  }
+
+  #pauseButton {
+    visibility: visible;
+    position: absolute;
+    left: 47%;
+    bottom: 20%;
+    transform: scale(6);
+  }
+
+  .Portal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .Radio_controls {
+    transform: scale(1);
+  }
+}
+
