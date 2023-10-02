@@ -8,3 +8,5 @@
 <p align="center">
   <img src="./images/code-fi logo - dark.png" alt="code-fi logo"/>
 </p>
+
+[Check it out here!](https://sbirvin1s.github.io/code-fi/src/pages/Radio.html)  
