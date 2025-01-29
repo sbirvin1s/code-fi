@@ -1,0 +1,44 @@
+:root {
+  --smallScreen: 640px;
+  --mediumScreen: 1007px;
+  --main-blue: #90caf9;
+  --main-white: #f8f5ef;
+  --main-grey: rgba(255, 255, 255, 0.23);
+  --main-dark-grey: #121212;
+  --main-focus: #a679d2;
+  --main-purple: #92278f;
+  --logo-gradient:linear-gradient(60deg, #1C75BC, #92278F);
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: 'Audiowide';
+  font-size: 2.5rem;
+  color: var(--main-purple);
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--main-white);
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--main-white);
+}
